@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Loops and Iterations Task</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+    button {
+      margin: 5px;
+      padding: 8px 12px;
+      cursor: pointer;
+    }
+    #output {
+      margin-top: 20px;
+      padding: 10px;
+      border: 1px solid #ccc;
+      background: #f9f9f9;
+      white-space: pre-line;
+    }
+  </style>
+</head>
+<body>
+  <h2>Performance Task: Loops and Iterations</h2>
+  <h3>RUSSEL RUIZ P. MIRANDA</h3>
+
+
+  <!-- IF / ELSE tasks -->
+  <button onclick="checkAge()">Check Age</button>
+  <button onclick="checkNumber()">Check Number</button>
+
+  <!-- FOR loop tasks -->
+  <button onclick="printZeroToThirty()">Print 0–30</button>
+  <button onclick="printEvenNumbers()">Print Even Numbers (0–40)</button>
+  <button onclick="printMultiplesOfThree()">Print Multiples of 3 (40–10)</button>
+
+  <div id="output"></div>
+
+  <script>
+    const outputDiv = document.getElementById("output");
+
+    // 1a) Age check
+    function checkAge() {
+      let age = parseInt(prompt("Enter your age:"));
+      if (age >= 25) {
+        outputDiv.textContent = "You are 25 years old and up.";
+      } else {
+        outputDiv.textContent = "You are below 25 years old.";
+      }
+    }
+
+    // 1b) Number check
+    function checkNumber() {
+      let number = parseInt(prompt("Enter a number:"));
+      if (number < 100) {
+        outputDiv.textContent = "You entered a number less than 100.";
+      } else {
+        outputDiv.textContent = "You entered a number greater than or equal to 100.";
+      }
+    }
+
+    // 2a) Print 0–30
+    function printZeroToThirty() {
+      let result = "Numbers from 0 to 30:\n";
+      for (let i = 0; i <= 30; i++) {
+        result += i + "\n";
+      }
+      outputDiv.textContent = result;
+    }
+
+    // 2b) Print even numbers 0–40
+    function printEvenNumbers() {
+      let result = "Even numbers from 0 to 40:\n";
+      for (let i = 0; i <= 40; i++) {
+        if (i % 2 === 0) {
+          result += i + "\n";
+        }
+      }
+      outputDiv.textContent = result;
+    }
+
+    // 2c) Print multiples of 3 from 40–10 descending
+    function printMultiplesOfThree() {
+      let result = "Multiples of 3 from 40 down to 10:\n";
+      for (let i = 40; i >= 10; i--) {
+        if (i % 3 === 0) {
+          result += i + "\n";
+        }
+      }
+      outputDiv.textContent = result;
+    }
+  </script>
+</body>
+</html>
