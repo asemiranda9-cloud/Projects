@@ -1,0 +1,31 @@
+
+body {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+
+.border {
+    width: 250px;
+    padding: 15px;
+    margin: 15px;
+    text-align: center;
+    border-top: 5px solid red;       /* Top border color */
+    border-bottom: 5px solid blue;   /* Bottom border color */
+    border-left: 5px dashed green;   /* Left border style */
+    border-right: 5px dotted orange; /* Right border style */
+    border-radius: 8px;
+}
+
+h2 {
+    margin-bottom: 10px;
+    font-size: 18px;
+    color: #333;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
